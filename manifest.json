@@ -1,0 +1,19 @@
+{
+  "name": "Sample",
+  "description": "Sample Extension",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage", "tabs"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://tech.smartshopping.co.jp/*"],
+      "js": ["content-script.js"]
+    }
+  ]
+}
