@@ -1,19 +1,15 @@
 {
-  "name": "Sample",
-  "description": "Sample Extension",
+  "name": "background changer",
+  "description": "change background color on your own",
   "version": "1.0",
   "manifest_version": 3,
   "background": {
     "service_worker": "background.js"
   },
-  "permissions": ["storage", "tabs"],
+  "permissions": ["storage", "activeTab", "scripting"],
   "action": {
-    "default_popup": "popup.html"
-  },
-  "content_scripts": [
-    {
-      "matches": ["https://tech.smartshopping.co.jp/*"],
-      "js": ["content-script.js"]
-    }
-  ]
+    "default_popup": "popup.html",
+    "default_icon": "logo.png",
+    "default_title": "background changer"
+  }
 }

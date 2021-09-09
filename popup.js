@@ -7,6 +7,7 @@ window.addEventListener('load', () => {
   chrome.storage.sync.get([storageKey], (items) => {
     inputColorText.value = items[storageKey]
   })
+  chrome.runtime.sendMessage('INITIALIZE')
 })
 
 changeColorButton.addEventListener('click', () => {
